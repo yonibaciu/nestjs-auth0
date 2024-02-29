@@ -2,6 +2,8 @@
 
 Based on the tutorial https://auth0.com/blog/developing-a-secure-api-with-nestjs-models-data-service/
 
+Client app to communicate wit the Nest server: https://dashboard-v1.whatabyte.app/
+
 ## Rules are obsolete
 
 The blog post mentions the need to add a rule in order to handle authorization. Rules in Auth0 are replaced with Actions.
