@@ -2,7 +2,23 @@
 
 Based on the tutorial https://auth0.com/blog/developing-a-secure-api-with-nestjs-models-data-service/
 
-Client app to communicate wit the Nest server: https://dashboard-v1.whatabyte.app/
+## Auth0 dashboard
+
+Create an app and set Allowed Callbacks URL, Allowed Logout URLs and Allowed Web Origins to http://localhost:5173 (the vite app)
+
+## run the Nest service
+
+```
+cd nestjs-service
+npm run start:dev
+```
+
+## run the vite client app
+
+```
+cd vite-app
+npm run dev
+```
 
 ## Rules are obsolete
 
