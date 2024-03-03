@@ -4,7 +4,25 @@ Based on the tutorial https://auth0.com/blog/developing-a-secure-api-with-nestjs
 
 ## Auth0 dashboard
 
+Create an API and set the Identifier to `https://menu-api.demo.com` (will be used as the audience setting)
 Create an app and set Allowed Callbacks URL, Allowed Logout URLs and Allowed Web Origins to http://localhost:5173 (the vite app)
+
+## Nest service .env file
+
+```
+PORT=<choose a port>
+AUTH0_AUDIENCE='https://menu-api.demo.com'
+AUTH0_ISSUER_URL='https://<tenant id>.us.auth0.com/'
+```
+
+## Vite client app .env file
+
+```
+VITE_AUTH0_DOMAIN=<tenant id>.us.auth0.com
+VITE_AUTH0_CLIENT_ID=<client id of auth0 app>
+VITE_AUTH0_AUDIENCE=https://menu-api.demo.com
+VITE_API_URL=http://localhost:<port selected for Nest service>
+```
 
 ## run the Nest service
 
