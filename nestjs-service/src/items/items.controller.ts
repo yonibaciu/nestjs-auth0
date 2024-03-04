@@ -19,12 +19,17 @@ import { PermissionsGuard } from 'src/permissions/permissions.guard';
 export class ItemsController {
   constructor(private readonly itemsService: ItemsService) {}
 
+  @UseGuards(AuthGuard('jwt'), PermissionsGuard)
   @Get()
+  @Permissions('read:items')
   async findAll(): Promise<Items> {
+    console.log('reading items...');
     return this.itemsService.findAll();
   }
 
+  @UseGuards(AuthGuard('jwt'), PermissionsGuard)
   @Get(':id')
+  @Permissions('read:items')
   async find(@Param('id') id: number): Promise<Item> {
     return this.itemsService.find(id);
   }
